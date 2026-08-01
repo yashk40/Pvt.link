@@ -1,0 +1,43 @@
+{
+  "name": "remotelock-windows",
+  "version": "1.0.0",
+  "description": "Pvt.link Windows Desktop App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder --win",
+    "pack": "electron-packager . PvtLink --platform=win32 --arch=x64 --out=dist --overwrite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^37.2.3",
+    "electron-builder": "^25.1.8",
+    "electron-packager": "^17.1.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "socket.io-client": "^4.8.3",
+    "ws": "^8.21.1"
+  },
+  "build": {
+    "appId": "com.lol32.pvtlink",
+    "productName": "PvtLink",
+    "forceCodeSigning": false,
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        "portable",
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}

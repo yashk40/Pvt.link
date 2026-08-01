@@ -1,0 +1,56 @@
+# Dependencies
+node_modules/
+
+# Local environment files (secrets / machine-specific config)
+.env
+.env.*
+!.env.example
+
+# Expo / bundler output
+.expo/
+.expo-web-test/
+dist/
+web-build/
+expo-env.d.ts
+
+# Generated native project (Expo prebuild)
+android app/android/
+ios/
+
+# Native keystores & signing
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Dev scratch / test artifacts
+android app/constructor.txt
+android app/packedMap.txt
+android app/tsc_errors.txt
+android app/tsc_errors_utf8.txt
+windows app/temp-webcam.html
+windows app/test-capture.js
+windows app/test-capture2.js
+
+# Local Claude Code config
+.claude/
+
+# Excluded workspace folders
+/hi/
+/pvt/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# TypeScript
+*.tsbuildinfo
