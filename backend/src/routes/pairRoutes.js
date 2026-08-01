@@ -1,0 +1,10 @@
+import { Router } from 'express';
+import { createDesktopSession, createPairCode, refreshDesktopPairCode, getDesktopStatus, unpairDesktop, verifyPairCode } from '../controllers/pairController.js';
+import { authenticate, authenticateAgent } from '../middleware/auth.js';
+const router = Router();
+router.post('/desktop/session', createDesktopSession);
+router.post('/desktop/code', authenticateAgent, refreshDesktopPairCode);
+router.get('/desktop/status', authenticateAgent, getDesktopStatus);
+router.post('/desktop/unpair', authenticateAgent, unpairDesktop);
+router.use(authenticate); router.post('/create', createPairCode); router.post('/verify', verifyPairCode);
+export default router;
