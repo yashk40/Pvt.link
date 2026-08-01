@@ -1,0 +1,27 @@
+{
+  "name": "pvtlink-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Secure API and realtime command relay for Pvt.link devices.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "check": "node --check src/server.js && node --check src/app.js"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "firebase-admin": "^13.0.2",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": { "nodemon": "^3.1.9" }
+}

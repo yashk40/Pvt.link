@@ -1,0 +1,19 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Since the Worker backend uses the Firebase Client SDK (firebase/firestore/lite),
+    // it accesses Firestore as a client. To make this work, we must allow access to these collections:
+    match /users/{document=**} {
+      allow read, write: if true;
+    }
+    match /pairCodes/{document=**} {
+      allow read, write: if true;
+    }
+    match /devices/{document=**} {
+      allow read, write: if true;
+    }
+    match /commands/{document=**} {
+      allow read, write: if true;
+    }
+  }
+}
